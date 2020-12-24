@@ -442,6 +442,7 @@ p {
 .logo {
   align-items: center;
   font-size: 20px;
+  line-height: 23px;
   /* color: var(--dark-font-color); */
 }
 .logo > img {
@@ -490,6 +491,9 @@ h1 {
   margin-bottom: 25px;
   font-weight: 500;
   /* color: var(--dark-font-color); */
+}
+.hero .content{
+  width: 555px;
 }
 .hero_p {
   margin-bottom: 50px;
@@ -568,7 +572,7 @@ h1 {
   color: #2fab73;
   margin-right: 10px;
 }
-.about .heading p {
+.about p {
   width: 400px;
 }
 .content li {
@@ -688,7 +692,6 @@ h1 {
   width: 16px;
   height: 16px;
 }
-
 .foto {
   margin-right: 20px;
   margin-bottom: 8px;
@@ -710,17 +713,12 @@ h1 {
 }
 .fa-long-arrow-left:before {
   content: "\f177";
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .fa-long-arrow-right:before {
   content: "\f178";
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .slider-arrow {
+  font-size: 30px;
   height: 60px;
   width: 60px;
   color: var(--theme-color);
@@ -755,7 +753,7 @@ h1 {
 /*=========================SUBSCRIBE===========================*/
 .subscribe {
   justify-content: space-between;
-  padding-top: 35px;
+  padding-top: 30px;
 }
 .subscribe > .container {
   background-color: #fff;
@@ -771,7 +769,7 @@ h1 {
 /*=========================FOOTER===========================*/
 .footer {
   background-color: #f8f8f8;
-  padding: 200px 0 100px 0;
+  padding: 200px 0 50px 0;
   margin-top: -125px;
 }
 .footer_container {
@@ -824,15 +822,15 @@ h1 {
   box-shadow: 0 10px 20px 0 #ccc;
   transition: 0.4s;
 }
-.sci:not(:nth-child(n3)){
-  margin-right: 20px;
-}
-.mr{
-  margin: 0 20px;
+.sci li:nth-child(n+2){
+  margin-left: 20px;
 }
 .social_media:hover {
   background-color: var(--theme-color);
   color: #fff;
+}
+.df{
+  display: none;
 }
 /*=========================FOOTER END===========================*/
 /* XX-Large devices (larger desktops) */
@@ -845,6 +843,9 @@ h1 {
 @media (max-width: 1199.98px) {
   .container {
     max-width: 960px;
+  }
+  .hero .content{
+    width: 100%;
   }
   .hero_image {
     width: 440px;
@@ -895,6 +896,9 @@ h1 {
   }
   h2 {
     font-size: 30px;
+  }
+  .benefits h2{
+    line-height: 10px;
   }
   .header {
     background-color: var(--theme-color-a12);
@@ -969,6 +973,9 @@ h1 {
     display: flex;
     justify-content: space-between;
   }
+  .map {
+    padding-top: 40px;
+  }
 }
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -980,13 +987,26 @@ h1 {
     width: 440px;
   }
   .benefits .section {
-    padding: 20px;
+    padding: 28px;
   }
   .benefits .icons {
-    margin-right: 15px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  .inf > span {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .inf > p {
+    font-size: 15px;
+  }
+  .plans {
+    padding: 40px 0;
   }
   .footer_container{
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   .fc{
     display: flex;
@@ -1002,15 +1022,117 @@ h1 {
     justify-content: center;
   }
   .footer_p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
   }
   .footer_nav{
-    justify-content: center;
+    margin-bottom: 35px;
+  }
+  .dn{
+    display: none;
+  }
+  .df{
+    display: block;
+  }
+  .footer_nav{
+    width: 100%;
   }
 
 }
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) and (min-width: 320px) {
+  h1{
+    font-size: 20px;
+    line-height: 35px;
+  }
+  .header_nav{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .header .nav > li:nth-child(n + 2) {
+    margin-left: 0;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .heading p, .hero_p {
+    width: 300px;
+  }
+  .hero_image{
+    width: 100%;
+  }
+  .button_right{
+    margin: 0;
+  }
+  .icons{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    opacity: .3;
+  }
+  .inf > span {
+    line-height: 0;
+  }
+  .inf p{
+    font-size: 10px;
+  }
+  .about_p{
+    width: 300px;
+  }
+  .red_buttons {
+    padding: 10px 50px;
+  }
+  .sub_p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .dropmenu{
+    font-size: 10px;
+  }
+  .footer h3{
+    font-size: 15px;
+  }
+  .dropmenu {
+    width: 91px;
 }
+.red_buttons{
+  font-weight: 500;
+}
+.hero{
+  padding-bottom: 25px;
+}
+.benefits {
+  padding: 30px 0;
+}
+.plans .heading {
+  margin-bottom: 30px;
+}
+.points {
+  margin-bottom: 30px;
+}
+.map .heading {
+  margin-bottom: 40px;
+}
+.partners {
+  padding: 10px 0;
+}
+.testimonials .heading {
+  margin-bottom: 30px;
+}
+.slides {
+  margin-bottom: 30px;
+}
+.testimonials {
+  padding-bottom: 0;
+}
+.slider-arrow {
+  font-size: 20px;
+  height: 45px;
+  width: 45px;
+}
+
+  }
