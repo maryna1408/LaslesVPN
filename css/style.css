@@ -538,6 +538,11 @@ h1 {
 .benefits .icons {
   color: var(--theme-color);
 }
+.inf{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
 .inf > span {
   font-size: 25px;
   line-height: 30px;
