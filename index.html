@@ -18,14 +18,20 @@
     <link rel="preconnect"
       href="https://fonts.gstatic.com"
       crossorigin />
+      <link rel="preconnect"
+      href="https://unpkg.com"
+      crossorigin />
     <meta charset="UTF-8" />
     <meta name="description"
       content="Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from us.">
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>LaslesVPN</title>
+    <link rel="preload"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      as="style">
     <link rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.css">
+      href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet"
       href="css/style.css">
     <link rel="shortcut icon"
@@ -35,8 +41,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="navbar flex">
-          <a href="/"
+        <a href="/"
             class="logo dark_font_color">
             <img width="1"
               height="1"
@@ -45,6 +50,7 @@
               alt="LaslesVPN logo" />
             <span class="medium">Lasles<span class="bold">VPN</span></span>
           </a>
+        <nav class="navbar flex"  id="navbar">
           <ul class="nav header_nav">
             <li><a href="#about">About</a></li>
             <li><a href="#benefits">Features</a></li>
@@ -56,7 +62,9 @@
             <button class="button_left dark_font_color">Sing In</button>
             <button class="button_right transparent_buttons">Sing Up</button>
           </div>
+          <button class="red_buttons menu_button close fas fa-times" id="menuButtonClose"></button>
         </nav>
+        <button class="red_buttons menu_button fas fa-bars" id="menuButton"></button>
       </div>
     </header>
     <main class="main">
@@ -318,7 +326,7 @@
                   <section class="comments">
                     <div class="mc flex">
                       <div class="personal_inf flex">
-                        <img src="images/foto1.png"
+                        <img width="50" height="50" src="images/foto1.webp"
                           alt="Viezh Robert's foto"
                           class="foto">
                         <div class="name">
@@ -344,7 +352,7 @@
                   <section class="comments">
                     <div class="mc flex">
                       <div class="personal_inf flex">
-                        <img src="images/foto2.png"
+                        <img width="50" height="50" src="images/foto2.webp"
                           alt="Viezh Robert's foto"
                           class="foto">
                         <div class="name">
@@ -369,7 +377,7 @@
                   <section class="comments">
                     <div class="mc flex">
                       <div class="personal_inf flex">
-                        <img src="images/foto3.png"
+                        <img width="50" height="50" src="images/foto3.webp"
                           alt="Viezh Robert's foto"
                           class="foto">
                         <div class="name">
@@ -402,6 +410,7 @@
               </div>
             </div>
           </div>
+        </div>
       </article>
       <div class="subscribe">
         <div class="container flex">
@@ -480,30 +489,20 @@
             </ul>
           </div>
         </div>
-        <div class="df">
-          <ul class="sci">
-            <li><a href="#"
-                aria-label="Link to Facebook">
-  
-                <i class="fab fa-facebook-f social_media"></i>
-              </a></li>
-            <li><a href="#"
-                aria-label="Link to Twitter">
-  
-                <i class="fab fa-twitter social_media"></i>
-              </a></li>
-            <li><a href="#"
-                aria-label="Link to Instagram">
-  
-                <i class="fab fa-instagram social_media"></i>
-              </a></li>
-          </ul>
-          <p class="copyright">&copy;2020Lasles<span class="medium">VPN</span></p>
-        </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+
+      menuButton.addEventListener('click', ev => {
+        navbar.classList.add('open')
+      })
+      menuButtonClose.addEventListener('click', ev => {
+        navbar.classList.remove('open')
+      })
+
+
+
       const testimonials_slider = new Swiper('.testimonials_swiper', {
         loop: true,
         slidesPerView: 1,
